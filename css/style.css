@@ -1,0 +1,29 @@
+:root {
+    --color-black-subtle: #121212;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    /* scrollbar color */
+    scrollbar-color: var(--color-black-subtle);
+}
+.vh-85 {
+    height: 85vh !important;
+}
+#searchBackground {
+    background: url('../assets/images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #4f4f4f !important;
+    background-blend-mode: overlay;
+    filter: blur(6.5px);
+
+}
+.w-20px {
+    width: 20px !important;
+}
+.bg-black {
+    background-color: var(--color-black-subtle) !important;
+}
+.bg-black-subtle {
+    background-color: var(--color-black-subtle) !important;
+}
