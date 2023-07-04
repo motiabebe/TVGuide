@@ -181,10 +181,10 @@ const randomTVShows = async () => {
         }
         
         randomTVShowsList.innerHTML += `
-            <div class="card mb-3 col-lg-4 col-md-12 border-0 text-light">
-                <div class="row g-0 bg-gradient bg-black rounded-5">
+            <div class="card mb-3 col-lg-4 border-0 text-light">
+                <div class="d-flex g-0 bg-gradient bg-black rounded-5">
                     <div class="col-md-6">
-                        <img src="${tvShow.image.medium}" class="rounded-5" alt="${tvShow.name}" width="200px">
+                        <img src="${tvShow.image.medium}" class="rounded-5 img-fluid" alt="${tvShow.name}" width="200px">
                     </div>
                     <div class="col-md-6">
                         <div class="card-body d-flex flex-column justify-content-between">
