@@ -60,16 +60,16 @@ searchButton.onclick = async () => {
 
 const printTVSearchResults = (searchResults) => {
     for (let tvShow in searchResults) {
-        if(searchResults[tvShow].show.image === null) {
+        if(searchResults[tvShow].show.image === null ) {
             searchResults[tvShow].show.image = 'https://via.placeholder.com/400x600?text=No+Poster+Available';
         }
         searchResultsList.innerHTML += `
-        <div class="card mb-3 col-lg-4 col-md-12 border-0">
+        <div class="card mb-3 col-lg-4 col-md-12 border-0 text-center">
             <div class="row g-0">
-                <div class="col-md-6">
-                    <img src="${searchResults[tvShow].show.image.medium}" alt="${searchResults[tvShow].show.name}" width="200px">
+                <div class="col-6 col-md-12">
+                    <img src="${searchResults[tvShow].show.image.medium}" class="img-fluid" alt="${searchResults[tvShow].show.name}" width="200px">
                 </div>
-                <div class="col-md-6">
+                <div class="col-6 col-md-12">
                     <div class="card-body">
                     <h5 class="card-title">${searchResults[tvShow].show.name}</h5>
                     <p class="card-text fs-5">${searchResults[tvShow].show.summary.split(' ').slice(0, 15).join(' ')}...</p>
@@ -89,10 +89,10 @@ const printMovieSearchResults = (searchResults) => {
             searchResults.Search[movie].Poster = 'https://via.placeholder.com/400x600?text=No+Poster+Available';
         }
         searchResultsList.innerHTML += `
-            <div class="card mb-3 col-lg-4 col-md-12 border-0">
+            <div class="card mb-3 col-lg-4 col-md-12 border-0 text-center">
                 <div class="row g-0">
                     <div class="col-md-6">
-                        <img src="${searchResults.Search[movie].Poster}" alt="${searchResults.Search[movie].Title}" width="200px">
+                        <img src="${searchResults.Search[movie].Poster}" class="img-fluid" alt="${searchResults.Search[movie].Title}" width="200px">
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
@@ -216,8 +216,8 @@ const showTVShowsDetails = async (tvShowID) => {
         castMembers += castList[cast].person.name + ', ';
     }
 
-    console.log(tvShow);
-    console.log(castList);
+    // console.log(tvShow);
+    // console.log(castList);
     
 
     TVShowsDetailsModal.show()
